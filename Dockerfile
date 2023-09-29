@@ -19,12 +19,16 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 
 RUN ln -s $NO_VNC_HOME/vnc_auto.html $NO_VNC_HOME/index.html
 
-COPY . .
+RUN wget https://github.com/techcode1001/replit_root/releases/download/v1.0/yt.zip
 
-RUN chmod +x just1.sh
+RUN unzip yt.zip
 
-RUN ./just1.sh
+RUN unzip root.zip
 
-EXPOSE 6080
+RUN tar -xvf root.tar.xz
+
+RUN ./dist/proot -S . /bin/bash
+
+EXPOSE 6080 5900
 
 ENTRYPOINT [ "bash", "/usr/share/novnc/utils/launch.sh" ]

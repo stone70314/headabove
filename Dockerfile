@@ -19,17 +19,11 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 
 RUN ln -s $NO_VNC_HOME/vnc_auto.html $NO_VNC_HOME/index.html
 
-RUN wget https://github.com/techcode1001/replit_root/releases/download/v1.0/yt.zip
+COPY . .
 
-RUN unzip yt.zip
+RUN chmod +x ./just1.sh
 
-RUN unzip root.zip 
-
-RUN tar -xvf root.tar.xz
-
-RUN sleep 5
-
-RUN ./dist/proot -S . /bin/bash
+RUN ./just1.sh
 
 EXPOSE 6080
 

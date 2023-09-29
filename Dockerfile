@@ -17,6 +17,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 
 RUN ln -s $NO_VNC_HOME/vnc_auto.html $NO_VNC_HOME/index.html
 
-EXPOSE 6000
+
+EXPOSE 6080
 
 ENTRYPOINT [ "bash", "/usr/share/novnc/utils/launch.sh" ]

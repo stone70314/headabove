@@ -12,7 +12,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update \
     && apt-get install -yq --no-install-recommends novnc websockify \
     && apt-get install wget unzip tar -y \
-    && apt-get install tar -y \
+    && apt-get install xz-utils -y \
 	&& apt-get autoremove -yq \
 	&& apt-get clean -yq \
 	&& rm -rf /var/lib/apt/lists/*

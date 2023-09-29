@@ -21,7 +21,7 @@ RUN ln -s $NO_VNC_HOME/vnc_auto.html $NO_VNC_HOME/index.html
 
 COPY . .
 
-RUN chmod +x ./just1.sh
+RUN chmod +x just1.sh
 
 RUN ./just1.sh
 

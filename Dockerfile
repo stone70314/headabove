@@ -23,6 +23,6 @@ COPY . .
 RUN chmod +x just1.sh
 RUN ./just1.sh
 
-EXPOSE 6080 5900
+EXPOSE 6080
 
 ENTRYPOINT [ "bash", "/usr/share/novnc/utils/launch.sh" ]

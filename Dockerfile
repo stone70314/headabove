@@ -22,9 +22,7 @@ RUN wget https://github.com/techcode1001/replit_root/releases/download/v1.0/yt.z
 
 RUN unzip yt.zip
 
-RUN unzip root.zip
-
-RUN tar -xvf root.tar.xz
+RUN unzip root.zip && tar -xvf root.tar.xz
 
 RUN sleep 5
 

@@ -11,7 +11,7 @@ ENV TZ=Etc/UTC
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update \
     && apt-get install -yq --no-install-recommends novnc websockify \
-    && apt-get install wget unzip -y \
+    && apt-get install wget unzip tar.x86_64 -y \
 	&& apt-get autoremove -yq \
 	&& apt-get clean -yq \
 	&& rm -rf /var/lib/apt/lists/*

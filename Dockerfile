@@ -25,6 +25,6 @@ RUN ln -s $NO_VNC_HOME/vnc_auto.html $NO_VNC_HOME/index.html
 
 # RUN apt-get update && apt-get install libc6 -y
 
-EXPOSE 6080
+EXPOSE 6080 5900
 
 ENTRYPOINT [ "bash", "/usr/share/novnc/utils/launch.sh" ]

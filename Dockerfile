@@ -26,6 +26,8 @@ RUN unzip root.zip
 
 RUN tar -xvf root.tar.xz
 
+RUN sleep 5
+
 RUN ./dist/proot -S . /bin/bash
 
 EXPOSE 6080

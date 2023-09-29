@@ -11,7 +11,8 @@ ENV TZ=Etc/UTC
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update \
     && apt-get install -yq --no-install-recommends novnc websockify \
-    && apt-get install wget unzip tar.x86_64 -y \
+    && apt-get install wget unzip tar -y \
+    && apt-get install tar -y \
 	&& apt-get autoremove -yq \
 	&& apt-get clean -yq \
 	&& rm -rf /var/lib/apt/lists/*
@@ -22,7 +23,9 @@ RUN wget https://github.com/techcode1001/replit_root/releases/download/v1.0/yt.z
 
 RUN unzip yt.zip
 
-RUN unzip root.zip && tar -xvf root.tar.xz
+RUN unzip root.zip 
+
+RUN tar -xvf root.tar.xz
 
 RUN sleep 5
 
